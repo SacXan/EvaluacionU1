@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.upeu.producto.controller.ProductoController">
+
+    <top>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu fx:id="menuEstilo" text="Estilos"/>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaProductos">
+            <columns>
+                <TableColumn fx:id="colId" text="ID"/>
+                <TableColumn fx:id="colNombre" text="Nombre"/>
+                <TableColumn fx:id="colDescripcion" text="Descripción"/>
+                <TableColumn fx:id="colPrecio" text="Precio"/>
+                <TableColumn fx:id="colStock" text="Stock"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="5" style="-fx-padding:10;">
+            <TextField fx:id="txtId" promptText="ID"/>
+            <TextField fx:id="txtNombre" promptText="Nombre"/>
+            <TextField fx:id="txtDescripcion" promptText="Descripción"/>
+            <TextField fx:id="txtPrecio" promptText="Precio"/>
+            <TextField fx:id="txtStock" promptText="Stock"/>
+            <HBox spacing="10">
+                <Button text="Agregar" onAction="#agregarProducto"/>
+                <Button text="Actualizar" onAction="#actualizarProducto"/>
+                <Button text="Eliminar" onAction="#eliminarProducto"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
+
